@@ -9,11 +9,11 @@ import java.util.Vector;
  */
 public class DeckOfCards {
 	
-	private Vector<Card> cardsInDeck = createCardsAndShuffle();
+	private Vector<Card> cardsInDeck = createDeckOfCardsAndShuffle();
 
-	private Vector<Card> createCardsAndShuffle()
+	private Vector<Card> createDeckOfCardsAndShuffle()
 	{
-		Vector<Card> ret = createCards();
+		Vector<Card> ret = createDeckOfCards();
 		
 		System.out.println("Currently shuffling cards...");
 		GameOfSevens.pause();
@@ -23,7 +23,7 @@ public class DeckOfCards {
 		return ret;
 	}
 
-	protected Vector<Card> createCards()
+	public Vector<Card> createDeckOfCards()
 	{
 		Vector<Card> ret = new Vector<Card>();
 		for (CardSuit suit : CardSuit.values())
