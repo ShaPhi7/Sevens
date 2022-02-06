@@ -1,4 +1,4 @@
-package Shaun.sevens.Game;
+package Maven.shaun.Maven;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,13 +6,18 @@ import java.util.Vector;
 
 import org.junit.*;
 
+import Shaun.sevens.Game.Card;
+import Shaun.sevens.Game.CardSuit;
+import Shaun.sevens.Game.CardValue;
+import Shaun.sevens.Game.DeckOfCards;
+
 public class DeckOfCardsTest
 {
 	@Test
 	public void testCreateCards() {
 		DeckOfCards testDeck = new DeckOfCards();
 		
-		Vector<Card> result = testDeck.createCards();
+		Vector<Card> result = testDeck.createDeckOfCards();
 		
 		Vector<Card> expected = createCardsLongWay();
 		
